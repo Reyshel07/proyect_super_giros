@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:proyect_super_giros/presentation/screens/allTurns/all_turns.dart';
+import 'package:proyect_super_giros/presentation/screens/received/received.dart';
 import 'package:proyect_super_giros/presentation/screens/send/send.dart';
+import 'package:proyect_super_giros/presentation/screens/sent/sent.dart';
 
 class ButoonOptionsScreen extends StatelessWidget {
-  static const paht ='/ButoonOptionsScreen';
+  static const path ='/ButoonOptionsScreen';
   static const name ='ButoonOptionsScreen';
-  const ButoonOptionsScreen({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -47,15 +50,13 @@ class ButoonOptionsScreen extends StatelessWidget {
           ),
            Padding(padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 80),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: (){
                     Navigator.push(
-                      context, 
-                      MaterialPageRoute(
-                        builder: (context)=> SendScreen()
-                      )
+                      context,
+                      MaterialPageRoute(builder: (context) => SendScreen())
                     );
                   }, 
                   style: ElevatedButton.styleFrom(
@@ -74,11 +75,11 @@ class ButoonOptionsScreen extends StatelessWidget {
                 SizedBox(height: smallSpacing,),
                 ElevatedButton(
                   onPressed: (){
-                    /*Navigator.push(
+                    Navigator.push(
                       context, MaterialPageRoute(
-                        builder: (context)=> ButoonOptionsScreen()
+                        builder: (context)=> SentScreen(),
                       )
-                    );*/
+                    );
                   }, 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 0, 61, 2),
@@ -95,11 +96,11 @@ class ButoonOptionsScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: (){
-                    /*Navigator.push(
+                    Navigator.push(
                       context, MaterialPageRoute(
-                        builder: (context)=> ButoonOptionsScreen()
+                        builder: (context)=> ReceivedScreen()
                       )
-                    );*/
+                    );
                   }, 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 0, 61, 2),
@@ -116,11 +117,11 @@ class ButoonOptionsScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: (){
-                    /*Navigator.push(
+                    Navigator.push(
                       context, MaterialPageRoute(
-                        builder: (context)=> ButoonOptionsScreen()
+                        builder: (context)=> AllTurnsScreen()
                       )
-                    );*/
+                    );
                   }, 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 0, 61, 2),
